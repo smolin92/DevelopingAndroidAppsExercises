@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (26) Override onPreExecute to set the loading indicator to visible
         @Override
         protected void onPreExecute() {
-            mProgressBar.setVisibility(View.VISIBLE);
             super.onPreExecute();
+            mProgressBar.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -115,9 +115,10 @@ public class MainActivity extends AppCompatActivity {
                 // COMPLETED (17) Call showJsonDataView if we have valid, non-null results
                 showJsonDataView();
                 mSearchResultsTextView.setText(githubSearchResults);
+            } else{
+                // COMPLETED (16) Call showErrorMessage if the result is null in onPostExecute
+                showErrorMessage();
             }
-            // COMPLETED (16) Call showErrorMessage if the result is null in onPostExecute
-            showErrorMessage();
         }
     }
 
