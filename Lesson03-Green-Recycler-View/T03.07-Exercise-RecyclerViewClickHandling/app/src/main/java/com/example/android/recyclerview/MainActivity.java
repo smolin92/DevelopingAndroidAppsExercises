@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
             mToast.cancel();
         }
         String message = "Clicked number: " + position;
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        mToast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+        mToast.show();
     }
 }
