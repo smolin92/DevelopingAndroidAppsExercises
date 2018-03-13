@@ -60,7 +60,7 @@ public class GuestListAdapter extends RecyclerView.Adapter<GuestListAdapter.Gues
     // DONE (15) Create a new function called swapCursor that takes the new cursor and returns void
     public void swapCursor(Cursor newCursor) {
         // DONE (16) Inside, check if the current cursor is not null, and close it if so
-        if (this.mCursor == null) {
+        if (this.mCursor != null) {
             this.mCursor.close();
         }
 
